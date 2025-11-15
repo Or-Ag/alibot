@@ -16,7 +16,14 @@ TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
 CHAT_ID = int(os.getenv("CHAT_ID"))  # חובה INT
 
 # ---------- AI ----------
-OPENAI
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+
+KEYWORDS = [
+    "smart home",
+    "screwdriver",
+    "magnetic bit",
+    "usb c",
+]
 
 ]
 
@@ -175,5 +182,6 @@ async def start_bot():
 
 if __name__ == "__main__":
     asyncio.run(start_bot())
+
 
 
