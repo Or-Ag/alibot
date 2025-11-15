@@ -6,26 +6,18 @@ import random
 import asyncio
 from telegram import Bot
 
-ALI_APP_KEY = "518388"  # זה לא סודי – אפשר להשאיר
+# ---------- AliExpress ----------
+ALI_APP_KEY = "518388"  # לא סודי
 ALI_APP_SECRET = os.getenv("ALI_APP_SECRET")
 ALI_TRACKING_ID = os.getenv("ALI_TRACKING_ID")
 
+# ---------- Telegram ----------
 TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
-CHAT_ID = int(os.getenv("CHAT_ID"))
+CHAT_ID = int(os.getenv("CHAT_ID"))  # חובה INT
 
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+# ---------- AI ----------
+OPENAI
 
-
-
-TELEGRAM_TOKEN = "8155169543:AAH9wBnpopllxfwD0WNDHKpLwVWtz0QALXQ"
-CHAT_ID = -4810932520
-
-
-KEYWORDS = [
-    "smart home",
-    "screwdriver",
-    "magnetic bit",
-    "usb c",
 ]
 
 # ---------- AliExpress helpers ----------
@@ -183,4 +175,5 @@ async def start_bot():
 
 if __name__ == "__main__":
     asyncio.run(start_bot())
+
 
