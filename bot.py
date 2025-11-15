@@ -1,3 +1,4 @@
+import os
 import requests
 import hashlib
 import time
@@ -5,9 +6,15 @@ import random
 import asyncio
 from telegram import Bot
 
-ALI_APP_KEY = "518388"
-ALI_APP_SECRET = "gMa4u0aO06WYdgILhjF5lhEbN660mBcm"
-ALI_TRACKING_ID = "default"
+ALI_APP_KEY = "518388"  # זה לא סודי – אפשר להשאיר
+ALI_APP_SECRET = os.getenv("ALI_APP_SECRET")
+ALI_TRACKING_ID = os.getenv("ALI_TRACKING_ID")
+
+TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
+CHAT_ID = int(os.getenv("CHAT_ID"))
+
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+
 
 
 TELEGRAM_TOKEN = "8155169543:AAH9wBnpopllxfwD0WNDHKpLwVWtz0QALXQ"
@@ -176,3 +183,4 @@ async def start_bot():
 
 if __name__ == "__main__":
     asyncio.run(start_bot())
+
